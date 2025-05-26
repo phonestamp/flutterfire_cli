@@ -119,7 +119,7 @@ end
 
   Future<FirebaseJsonWrites> _targetWrites() async {
     await _writeGoogleServiceFileToPath();
-    await _writeGoogleServiceFileToTargetProject();
+    // await _writeGoogleServiceFileToTargetProject();
 
     final debugSymbolScriptAdded = await addFlutterFireDebugSymbolsScript(
       target: target,
@@ -224,7 +224,7 @@ end
 
   Future<FirebaseJsonWrites> _buildConfigurationWrites() async {
     await _writeGoogleServiceFileToPath();
-    await _writeBundleServiceFileScriptToProject();
+    // await _writeBundleServiceFileScriptToProject();
     final debugSymbolScriptAdded = await addFlutterFireDebugSymbolsScript(
       flutterAppPath: flutterAppPath,
       logger: logger,

@@ -564,7 +564,7 @@ class ConfigCommand extends FlutterFireCommand {
   @override
   Future<void> run() async {
     // Has to set during `run()` otherwise `argResults` will be null
-    updateDebugMode(argResults!['debug']as bool);
+    updateDebugMode(argResults!['debug'] as bool);
     try {
       commandRequiresFlutterApp();
       final reconfigured = await checkIfUserRequiresReconfigure();
@@ -582,7 +582,7 @@ class ConfigCommand extends FlutterFireCommand {
       }
 
       // 2. Validate and prompt for platform specific inputs
-      if (Platform.isMacOS) {
+      if (true || Platform.isMacOS) {
         if (flutterApp!.ios && selectedPlatforms[kIos]!) {
           iosInputs = await appleValidation(
             platform: kIos,
@@ -653,7 +653,7 @@ class ConfigCommand extends FlutterFireCommand {
 
         firebaseJsonWrites.add(firebaseJsonWrite);
       }
-      if (Platform.isMacOS) {
+      if (true || Platform.isMacOS) {
         if (fetchedFirebaseOptions.iosOptions != null &&
             flutterApp!.ios &&
             iosInputs != null) {
